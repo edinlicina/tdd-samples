@@ -40,14 +40,14 @@ public class PangramCheckerTests {
     @Test
     public void shouldReturnTrueIfInputIsClassicPangram(){
         var pangramChecker = new PangramChecker();
-        var input = pangramChecker.checkPangram("The quick brown fox jumps over the lazy dog");
+        var input = pangramChecker.checkPangram("The quick brown fox jumps over the lazy dog...");
         Assertions.assertTrue(input);
     }
 
     @Test
     public void shouldReturnFalseIfOneLetterIsMissing(){
         var pangramChecker = new PangramChecker();
-        var input = pangramChecker.checkPangram("The quick brown fox jumps over the lay dog");
+        var input = pangramChecker.checkPangram("The quick brown fox jumps over the la_y dog");
         Assertions.assertFalse(input);
     }
 }
